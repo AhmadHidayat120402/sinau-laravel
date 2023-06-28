@@ -12,7 +12,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        // $product = Product::where('name','Iphone')->get();
+        $products = Product::all();
+        return view('pages.product.index',['products' => $products,
+        'title'=> 'All Data']);
+
     }
 
     /**
