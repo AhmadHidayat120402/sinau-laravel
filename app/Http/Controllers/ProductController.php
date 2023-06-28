@@ -14,9 +14,10 @@ class ProductController extends Controller
     {
         // $product = Product::where('name','Iphone')->get();
         $products = Product::all();
-        return view('pages.product.index',['products' => $products,
-        'title'=> 'All Data']);
-
+        return view('pages.product.index', [
+            'products' => $products,
+            'title' => 'All Data'
+        ]);
     }
 
     /**
@@ -24,7 +25,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.product.create', [
+            'title' => 'Tambah Data Produk'
+        ]);
     }
 
     /**
@@ -32,7 +35,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data =  $request->all();
+        $data['image'] = $request->file('image')->store('product', 'public');
+
+        Product::create($data);
+        return redirect()->route('produk.index');
     }
 
     /**
