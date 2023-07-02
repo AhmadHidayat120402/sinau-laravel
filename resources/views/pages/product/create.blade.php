@@ -13,6 +13,10 @@
                 <input type="number" class="form-control" id="price" name="price" required>
             </div>
             <div class="mb-2">
+                <label for="stock">Stok Produk</label>
+                <input type="number" class="form-control" id="stock" name="stock" required>
+            </div>
+            <div class="mb-2">
                 <label for="image">Gambar</label>
                 <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
             </div>

@@ -10,6 +10,7 @@
                         <th>No</th>
                         <th>Nama Produk</th>
                         <th>Harga</th>
+                        <th>Stok</th>
                         <th>Gambar</th>
                         <th style="width: 100px; !important">Deskripsi</th>
                         <th>Aksi</th>
@@ -21,6 +22,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $row->name }}</td>
                             <td>Rp {{ number_format($row->price) }}</td>
+                            <td> {{ number_format($row->stock) }}</td>
                             <td><img src="{{ url('storage/' . $row->image) }}"
                                     style="width: 50px; height: 50px; object-fit: cover;" alt="gambar"></td>
                             <td>{{ $row->description }}</td>

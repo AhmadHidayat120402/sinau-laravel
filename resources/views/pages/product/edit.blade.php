@@ -14,6 +14,10 @@
                 <input type="number" class="form-control" id="price" name="price" required value="{{$product->price}}">
             </div>
             <div class="mb-2">
+                <label for="stock">stok Produk</label>
+                <input type="number" class="form-control" id="stock" name="stock" required value="{{$product->stock}}">
+            </div>
+            <div class="mb-2">
                 <label for="image">Gambar</label>
                 <input type="file" class="form-control" id="image" name="image" accept="image/*"  value="{{$product->image}}">
                 <span class="text-secondary">Jika tidak ingin mengganti gambar, jangan diisi</span>
